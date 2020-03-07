@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $infoArray = explode(" ", $loginInfo[i]);
             if ($username == $infoArray[0] && $password == $infoArray[1])
             {
+
                 return true;
             }
         }
@@ -72,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // Create the form:
 ?>
-<form action="process_registration.php" method="post" class="form--inline">
+<form action="" method="post" class="form--inline">
 
     <p><label for="username">Username:</label><input type="text" name="username" size="20" value="<?php if (isset($_POST['username'])) { print htmlspecialchars($_POST['username']); } ?>"></p>
 

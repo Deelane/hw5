@@ -36,6 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         print '<p class="text--error">Your password did not match your confirmed password!</p>';
     }
 
+    if (isset($_POST['first_name'])) { echo $_POST['first_name']; }
+    if (isset($_POST['last_name'])) { echo $_POST['last_name']; }
+    if (isset($_POST['email'])) { echo $_POST['email']; }
+
     if (!$problem) { // If there weren't any problems...
 
         // Print a message:
@@ -46,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     } else { // Forgot a field.
 
-        print '<p class="text--error">Please try again!</p>';
+        print '<p class="text--error">You forgot a field, please try again!</p>';
 
     }
 
@@ -54,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // Create the form:
 ?>
-<form action="process_registration.php" method="post" class="form--inline">
+<form action="" method="post" class="form--inline">
 
     <p><label for="first_name">First Name:</label><input type="text" name="first_name" size="20" value="<?php if (isset($_POST['first_name'])) { print htmlspecialchars($_POST['first_name']); } ?>"></p>
 
