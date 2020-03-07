@@ -1,2 +1,5 @@
+<h1>MAIN CONTENT HOME PAGE</h1>
+
 <?php
-echo test;
+include "header.php";
+include "footer.php";
